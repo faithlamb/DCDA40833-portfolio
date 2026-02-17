@@ -71,8 +71,41 @@ nav {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Hamburger Menu Button */
+.hamburger {
+    display: none;              /* Hidden on desktop */
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+/* Hamburger Animation when active */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
 /* Style the navigation list */
-nav ul {
+.nav-menu {
     list-style: none;           /* Remove bullets */
     padding: 0;                 /* Remove default padding */
     margin: 0;                  /* Remove default margin */
@@ -382,18 +415,51 @@ footer a:hover {
 
     nav {
         font-size: 0.9rem;
+        justify-content: space-between;
+        padding: 1rem;
     }
 
-    /* Stack navigation vertically on mobile */
-    nav ul {
-        flex-direction: column;  /* Change from row to column */
-        align-items: center;     /* Center the stacked items */
+    /* Show hamburger menu on mobile */
+    .hamburger {
+        display: flex;
+        position: absolute;
+        left: 1rem;
+    }
+
+    /* Hide navigation menu by default on mobile */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        flex-direction: column;
+        background-color: #3d1461;
+        width: 100%;
+        text-align: center;
+        transition: left 0.3s ease;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 1rem 0;
+        gap: 0;
+    }
+
+    /* Show menu when active */
+    .nav-menu.active {
+        left: 0;
+    }
+
+    nav li {
+        margin: 0;
     }
 
     nav a {
-        display: block;          /* Full width for easier tapping */
+        display: block;
         width: 100%;
         text-align: center;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav a:hover {
+        background-color: var(--primary-color);
     }
 
     main section {
