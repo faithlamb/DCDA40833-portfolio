@@ -16,6 +16,17 @@
     --white: #ffffff;
 }
 
+/* Dark Mode Variables */
+body[data-theme="dark"] {
+    --primary-color: #7c3aed;      /* Lighter purple for dark mode */
+    --secondary-color: #9f7aea;    /* Even lighter purple */
+    --accent-color: #ffd700;       /* Gold accent stays */
+    --text-color: #e4e4e7;         /* Light gray for text */
+    --text-secondary: #a1a1aa;     /* Medium gray for captions */
+    --bg-color: #18181b;           /* Very dark background */
+    --white: #27272a;              /* Dark gray instead of white */
+}
+
 /* =========================
    Basic Reset & Typography
    ========================= */
@@ -65,10 +76,39 @@ nav {
     padding: 0.75rem;
     display: flex;              /* Make nav a flex container */
     justify-content: center;    /* Center the ul inside nav */
+    align-items: center;        /* Vertically center items */
     position: sticky;           /* Stick to top when scrolling */
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    position: absolute;
+    right: 1rem;
+    background: none;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+.dark-mode-toggle:active {
+    transform: scale(0.95);
 }
 
 /* Hamburger Menu Button */
@@ -144,7 +184,7 @@ main {
 
 /* All sections inside main get consistent styling */
 main section {
-    background-color: white;
+    background-color: var(--white);
     padding: 2rem;
     margin-bottom: 2rem;       /* Space between sections */
     border-radius: 8px;        /* Rounded corners */
@@ -217,6 +257,13 @@ main section li {
     margin: 2rem 0;
 }
 
+/* Dark mode inline code */
+body[data-theme="dark"] p code, 
+body[data-theme="dark"] li code {
+    background: #3f3f46;
+    color: #fca5a5;
+}
+
 /* =========================
    Code Blocks
    ========================= */
@@ -269,7 +316,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 1.5rem 0;
-    background: white;
+    background: var(--white);
 }
 
 th, td {
@@ -309,6 +356,7 @@ tr:nth-child(even) {
     font-weight: bold;
 }
 
+
 /* =========================
    Framework Connections
    ========================= */
@@ -318,6 +366,11 @@ tr:nth-child(even) {
     border-radius: 8px;
     padding: 1.5rem;
     margin: 2rem 0;
+}
+
+/* Dark mode portfolio card border */
+body[data-theme="dark"] .portfolio-card {
+    border-color: #3f3f46;
 }
 
 .framework-callout h3 {
@@ -343,7 +396,7 @@ tr:nth-child(even) {
 /* Individual portfolio card styling */
 .portfolio-card {
     display: block;
-    background: white;
+    background: var(--white);
     border: 2px solid #e2e8f0;
     border-radius: 12px;
     padding: 1.5rem;
@@ -424,6 +477,15 @@ footer a:hover {
         display: flex;
         position: absolute;
         left: 1rem;
+    }
+    
+    /* Keep dark mode toggle visible on mobile */
+    .dark-mode-toggle {
+        position: absolute;
+        right: 1rem;
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
     }
 
     /* Hide navigation menu by default on mobile */

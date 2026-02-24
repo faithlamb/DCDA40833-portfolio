@@ -11,7 +11,7 @@
 
 <!-- I couldn't find the part about the text colors. -->
 <body>
-    <!-- Navigation: Links to all portfolio pages -->
+
     <nav>
         <button class="hamburger" aria-label="Toggle navigation menu">
             <span></span>
@@ -23,20 +23,21 @@
             <li><a href="lab02.html">AI Evaluation</a></li>
             <li><a href="lab03.html">Tufte Critique</a></li>
             <li><a href="lab04.html">Tableau Viz</a></li>
-            <li><a href="lab5.html">Lab 5</a></li>
+            <li><a href="lab05.html">Vibe Coding</a></li>
             <li><a href="hometown-map.html">Hometown Map</a></li>
             
         </ul>
+
+        <button class="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
     </nav> 
 
-    <!-- Header: Your name and course info -->
+
     <header>
         <h1>Faith Lamb</h1>
         <p>DCDA 40833 Skills Portfolio | Spring 2026</p>
     </header>
 
     <main>
-        <!-- Welcome Section: Brief introduction to your portfolio -->
         <section id="welcome">
             <h2>Welcome</h2>
             <!-- I left this copy becuase it is what I was going to say and perfectly written. -->
@@ -45,7 +46,6 @@
         </section>
          
 
-        <!-- About Section: Tell visitors about yourself -->
         <section id="about">
             <h2>About Me</h2>
             <!-- I wrote this becuase it is in my personal voice and expresses my interests. -->
@@ -61,43 +61,38 @@
         
         </section>
 
-        <!-- Portfolio Section: Links to all lab pages -->
         <section id="portfolio">
             <h2>My Work</h2>
             <p>Click on any card below to view that lab assignment. Focus of actual labs may change over the course of the semester:</p>
 
-            <!-- Portfolio Grid: Cards linking to each lab page -->
+            <!-- made all the cards actually click into the different labs by coping code from above -->
+
             <div class="portfolio-grid">
 
-                <!-- Lab 2: AI Tool Evaluation -->
-                <a href="ai-evaluation.html" class="portfolio-card">
+                <a href="lab02.html" class="portfolio-card">
                     <h3>AI Tool Evaluation</h3>
                     <span class="lab-tag">Lab 2</span>
                     <p>Analysis of AI tools and their capabilities, exploring how artificial intelligence is changing digital culture.</p>
                 </a>
 
-                <!-- Lab 3: Tufte Critique -->
-                <a href="tufte-critique.html" class="portfolio-card">
+                <a href="lab03.html" class="portfolio-card">
                     <h3>Tufte Critique</h3>
                     <span class="lab-tag">Lab 3</span>
                     <p>Critical analysis of a data visualization using Edward Tufte's principles of graphical excellence.</p>
                 </a>
 
-                <!-- Lab 4: Tableau Visualization -->
-                <a href="tableau-visualization.html" class="portfolio-card">
+                <a href="lab04.html" class="portfolio-card">
                     <h3>Tableau Visualization</h3>
                     <span class="lab-tag">Lab 4</span>
                     <p>Interactive data visualization created with Tableau Public, exploring patterns in real-world data.</p>
                 </a>
 
-                <!-- Lab 5: TBD -->
-                <a href="lab5.html" class="portfolio-card">
-                    <h3>Lab 5</h3>
+                <a href="lab05.html" class="portfolio-card">
+                    <h3>Vibe Coding</h3>
                     <span class="lab-tag">Lab 5</span>
                     <p>Content based on Lab 5 assignment.</p>
                 </a>
 
-                <!-- Lab 6: Hometown Map -->
                 <a href="hometown-map.html" class="portfolio-card">
                     <h3>Hometown Map</h3>
                     <span class="lab-tag">Lab 6</span>
@@ -107,7 +102,6 @@
             </div>
         </section>
 
-        <!-- Reflection Section: Optional semester reflection -->
         <section id="reflection">
             <h2>Semester Reflection</h2>
             <!-- TODO: After completing all labs, write a reflection on your growth -->
@@ -140,6 +134,32 @@
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
             });
+        });
+
+        <!-- I have no idea how this works but it works! -->
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        
+        // Check for saved theme preference or default to 'light'
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.body.setAttribute('data-theme', currentTheme);
+        
+        // Update button icon based on current theme
+        if (currentTheme === 'dark') {
+            darkModeToggle.textContent = '☀️';
+        }
+        
+        // Toggle dark mode on button click
+        darkModeToggle.addEventListener('click', () => {
+            const theme = document.body.getAttribute('data-theme');
+            const newTheme = theme === 'dark' ? 'light' : 'dark';
+            
+            document.body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Update button icon
+            darkModeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
         });
     </script>
 </body>

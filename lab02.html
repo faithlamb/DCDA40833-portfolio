@@ -7,12 +7,24 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <nav>
+        <button class="hamburger" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lab02.html">AI Evaluation</a></li>
+            <li><a href="lab03.html">Tufte Critique</a></li>
+            <li><a href="lab04.html">Tableau Viz</a></li>
+            <li><a href="lab05.html">Lab 5</a></li>
+            <li><a href="hometown-map.html">Hometown Map</a></li>
+        </ul>
+        <button class="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+
     <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="lab02.html" class="active">Lab 2: AI Evaluation</a>
-            <!-- Add more lab links as the semester progresses -->
-        </nav>
         <h1>AI Tool Evaluation</h1>
     </header>
 
@@ -65,7 +77,55 @@ Anthropic trained Claude on internet text, books, code repositories, and publish
     </main>
 
     <footer>
-        <p>&copy; 2026 Faith Lamb| <a href="https://github.com/yourusername/dcda-portfolio">GitHub</a></p>
+        <p>&copy; 2026 Faith Lamb| DCDA 40833 | TCU <a href="https://github.com/yourusername/dcda-portfolio">GitHub</a></p>
     </footer>
+
+
+    <!-- AI is adding in the humberger here which it didn't do last time and I missed.-->
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a nav link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        
+            <!-- I don't understand this code but can tell it makes it apply to all the pages -->
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        
+        // Check for saved theme preference or default to 'light'
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.body.setAttribute('data-theme', currentTheme);
+        
+        // Update button icon based on current theme
+        if (currentTheme === 'dark') {
+            darkModeToggle.textContent = '☀️';
+        }
+        
+        // Toggle dark mode on button click
+        darkModeToggle.addEventListener('click', () => {
+            const theme = document.body.getAttribute('data-theme');
+            const newTheme = theme === 'dark' ? 'light' : 'dark';
+            
+            document.body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Update button icon
+            darkModeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+        });
+    </script>
 </body>
 </html>
