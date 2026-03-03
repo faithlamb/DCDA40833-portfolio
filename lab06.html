@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hometown Map | Faith Lamb</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .map-container {
+            width: 100%;
+            height: 600px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .legend {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .legend h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: 1px solid rgba(0,0,0,0.2);
+        }
+        
+        .color-pink { background-color: #FF69B4; }
+        .color-orange { background-color: #FFA500; }
+        .color-lightblue { background-color: #ADD8E6; }
+        .color-beige { background-color: #F5F5DC; }
+    </style>
+</head>
+<body>
+    <nav>
+        <button class="hamburger" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lab02.html">AI Evaluation</a></li>
+            <li><a href="lab03.html">Tufte Critique</a></li>
+            <li><a href="lab04.html">Tableau Viz</a></li>
+            <li><a href="lab05.html">Lab 5</a></li>
+            <li><a href="lab06.html">Hometown Map</a></li>
+        </ul>
+        <button class="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+
+    <header>
+        <h1>Oceanside Hometown Map</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>My Oceanside</h2>
+            <p>This interactive map showcases the locations I feel are the most important places in Oceanside, California - my beautiful coastal hometown in San Diego, California. Click on any marker to see details about the location, including a personal description and a photo. The map uses a custom Mapbox style and is color-coded by location type for easy navigation.</p>
+        </section>
+
+        <section>
+            <h2>Interactive Map</h2>
+            <div class="map-container">
+                <iframe src="hometown_map.html" title="Oceanside Hometown Interactive Map"></iframe>
+            </div>
+            
+            <div class="legend">
+                <h3>Map Legend</h3>
+                <div class="legend-item">
+                    <div class="legend-color color-pink"></div>
+                    <span>Food & Restaurants</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color color-orange"></div>
+                    <span>Landmarks</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color color-lightblue"></div>
+                    <span>Beaches</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color color-beige"></div>
+                    <span>Resorts</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Reflection</h2>
+            
+            <p>I chose an image of a sunset beach for the color scheme inspiration for my map. Most of my favorite moments in Oceanside have been at sunset, so I wanted to base the map on that aesthetic. I chose pink as the terrain color because when you zoom out, it looks like the pink clouds in the image. I selected yellow and orange tones for the rest of the land so that when you zoom in, it becomes more of a blue and orange sunset. The zoom function was challenging because I had to adjust colors at different zoom levels to maintain the sunset look at all levels. The final map was created using Python, the Folium library, and Mapbox's Geocoding. I started by collecting data on 16 meaningful locations across Oceanside, organizing them in a CSV file with addresses, descriptions, and image URLs. Using AI, I wrote Python code to automatically geocode each address and plot them on the interactive map with my custom Mapbox basemap style. One technical challenge was ensuring accurate marker placement. Some locations required manual coordinate corrections to appear where they really are on the map. I customized each marker with different colors and icons based on location type, and each marker includes an interactive pop-up featuring the location name, my description, and a photo. I used Claude Sonnet 4.5 to develop both the Python mapping code and this Lab 6 portfolio page. AI assistance was invaluable in this project because I had never created an interactive map before and had no idea where to start. Through this process, I learned how to integrate multiple technologies and create something with a cohesive aesthetic and personal meaning.</p>
+
+              
+            <h3>Inspiration Image</h2>
+              <img src="images/Map Inspo.jpg" alt="Sunset Beach Inspiration" class="inspiration-image" width="300">
+
+            
+            <h3>Data & Tools</h3>
+            <ul>
+                <li><strong>Python Libraries:</strong> Folium (map creation), Pandas (data management), Requests (API calls)</li>
+                <li><strong>Mapbox:</strong> Custom basemap styling and Geocoding API</li>
+                <li><strong>Data Source:</strong> Personal knowledge and Google Maps</li>
+                <li><strong>Location Count:</strong> 16 places across Oceanside</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Faith Lamb | DCDA 40833 | TCU</p>
+    </footer>
+
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a nav link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        
+        // Check for saved theme preference or default to 'light'
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.body.setAttribute('data-theme', currentTheme);
+        
+        // Update button icon based on current theme
+        if (currentTheme === 'dark') {
+            darkModeToggle.textContent = '☀️';
+        }
+        
+        // Toggle dark mode on button click
+        darkModeToggle.addEventListener('click', () => {
+            const theme = document.body.getAttribute('data-theme');
+            const newTheme = theme === 'dark' ? 'light' : 'dark';
+            
+            document.body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Update button icon
+            darkModeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+</html>

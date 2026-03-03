@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_40fd29de1964b09bd6c6c9a971dee78a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_40fd29de1964b09bd6c6c9a971dee78a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_40fd29de1964b09bd6c6c9a971dee78a = L.map(
+                "map_40fd29de1964b09bd6c6c9a971dee78a",
+                {
+                    center: [33.1973773125, -117.3834990625],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_fecfa992f416b010af76ada1827a39a9 = L.tileLayer(
+                "https://api.mapbox.com/styles/v1/flamb22/cmm0wq4vu007601qz9f18a30a/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZmxhbWIyMiIsImEiOiJjbWx0cXJzbGwwMzNsM2xwbmZqaWw2Zjk3In0.Lo4lEcg-rbCpdEAbAzyh2w",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Mapbox",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_fecfa992f416b010af76ada1827a39a9.addTo(map_40fd29de1964b09bd6c6c9a971dee78a);
+        
+    
+            var marker_ede235870a5bc36409d10f161eced3b8 = L.marker(
+                [33.196303, -117.381506],
+                {
+}
+            ).addTo(map_40fd29de1964b09bd6c6c9a971dee78a);
+        
+    
+            var icon_c1a462badde971942667b1e17df2b6c3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f852444bf7fbf5e2bca87bd774e3fef6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d89be2c1e5f0ad3076f7040dfff54678 = $(`<div id="html_d89be2c1e5f0ad3076f7040dfff54678" style="width: 100.0%; height: 100.0%;">     <div style="width: 300px; font-family: Arial, sans-serif;">         <h3 style="color: #4d1979; margin-bottom: 10px;">California Surf Museum</h3>         <img src="https://www.surfertoday.com/images/stories/california-surf-museum.jpg" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;" alt="California Surf Museum">         <p style="font-size: 14px; line-height: 1.6; color: #333;">Surf museum chronicles the history of the sport with exhibits of surfboards, famous surfers & more.</p>     </div>     </div>`)[0];
+                popup_f852444bf7fbf5e2bca87bd774e3fef6.setContent(html_d89be2c1e5f0ad3076f7040dfff54678);
+            
+        
+
+        marker_ede235870a5bc36409d10f161eced3b8.bindPopup(popup_f852444bf7fbf5e2bca87bd774e3fef6)
+        ;
+
+        
+    
+    
+            marker_ede235870a5bc36409d10f161eced3b8.bindTooltip(
+                `<div>
+                     California Surf Museum
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ede235870a5bc36409d10f161eced3b8.setIcon(icon_c1a462badde971942667b1e17df2b6c3);
+            
+    
+            var marker_3b6fa480cdec0428c78085e9b4b8613a = L.marker(
+                [33.194663, -117.382872],
+                {
+}
+            ).addTo(map_40fd29de1964b09bd6c6c9a971dee78a);
+        
+    
+            var icon_dc491b4118e279ae692b76b2780cbf1b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "white",
+  "icon": "bed",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f8624bcfd857520c8ac6d9b32bf6683e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_13dffc93c613e1f8cab62e354518355c = $(`<div id="html_13dffc93c613e1f8cab62e354518355c" style="width: 100.0%; height: 100.0%;">     <div style="width: 300px; font-family: Arial, sans-serif;">         <h3 style="color: #4d1979; margin-bottom: 10px;">Mission Pacific Beach Resort</h3>         <img src="https://missionpacifichotel.com/gallery/" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;" alt="Mission Pacific Beach Resort">         <p style="font-size: 14px; line-height: 1.6; color: #333;">A sophisticated hotel that has returnats and a rooftop bar and pool.</p>     </div>     </div>`)[0];
+                popup_f8624bcfd857520c8ac6d9b32bf6683e.setContent(html_13dffc93c613e1f8cab62e354518355c);
+            
+        
+
+        marker_3b6fa480cdec0428c78085e9b4b8613a.bindPopup(popup_f8624bcfd857520c8ac6d9b32bf6683e)
+        ;
+
+        
+    
+    
+            marker_3b6fa480cdec0428c78085e9b4b8613a.bindTooltip(
+                `<div>
+                     Mission Pacific Beach Resort
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3b6fa480cdec0428c78085e9b4b8613a.setIcon(icon_dc491b4118e279ae692b76b2780cbf1b);
+            
+    
+            var marker_fcdc2b1c32b1224092e3b95b34e87f4c = L.marker(
+                [33.193773, -117.382577],
+                {
+}
+            ).addTo(map_40fd29de1964b09bd6c6c9a971dee78a);
+        
+    
+            var icon_66d8c411c50a6b894477645e1f2bb7ae = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "beige",
+  "iconColor": "white",
+  "icon": "bed",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d477e8857d6fe04595a0969f7f52798d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b34712dd311cff6ff10e01c1606f92d9 = $(`<div id="html_b34712dd311cff6ff10e01c1606f92d9" style="width: 100.0%; height: 100.0%;">     <div style="width: 300px; font-family: Arial, sans-serif;">         <h3 style="color: #4d1979; margin-bottom: 10px;">The Sea Bird Ocean Resort and Spa</h3>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwereXn0PMJBAcVLIKa89Frw0ZOmAPViBDyFFScl7lr7-33KuwFzSAsOgoOya7wgirj42BjQi5a3vENU6_Y4RyZ9ohRkcOzdM9VveIFmXOtHAeHxC_DXYga3rODJKzpiXgD55I4a-=s1360-w1360-h1020-rw" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;" alt="The Sea Bird Ocean Resort and Spa">         <p style="font-size: 14px; line-height: 1.6; color: #333;">A refined hotel that has nice bar and returants that perfect ot enjoy all year around.</p>     </div>     </div>`)[0];
+                popup_d477e8857d6fe04595a0969f7f52798d.setContent(html_b34712dd311cff6ff10e01c1606f92d9);
+            
+        
+
+        marker_fcdc2b1c32b1224092e3b95b34e87f4c.bindPopup(popup_d477e8857d6fe04595a0969f7f52798d)
+        ;
+
+        
+    
+    
+            marker_fcdc2b1c32b1224092e3b95b34e87f4c.bindTooltip(
+                `<div>
+                     The Sea Bird Ocean Resort and Spa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fcdc2b1c32b1224092e3b95b34e87f4c.setIcon(icon_66d8c411c50a6b894477645e1f2bb7ae);
+            
+    
+            var marker_ebe14c29cc0c20493965312035b20c2a = L.marker(
+                [33.196537, -117.386058],
+                {
+}
+            ).addTo(map_40fd29de1964b09bd6c6c9a971dee78a);
+        
+    
+            var icon_6a1c8c0ef9f5525ef9296e8576986212 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightblue",
+  "iconColor": "white",
+  "icon": "water",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_77fd2cf6c079f0006d932cc4ad6a52f7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_532a83fba342d9f609d51692ace5a78b = $(`<div id="html_532a83fba342d9f609d51692ace5a78b" style="width: 100.0%; height: 100.0%;">     <div style="width: 300px; font-family: Arial, sans-serif;">         <h3 style="color: #4d1979; margin-bottom: 10px;">The Strand</h3>         <img src="https://scontent-dfw6-1.xx.fbcdn.net/v/t39.30808-6/549827655_122186186048328528_8258849407313812852_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=13d280&_nc_ohc=DzFKqjcMrNIQ7kNvwFCH2h0&_nc_oc=AdnpIOnb9sZnvmg13A0XPATqbJ4C352lhjzuP0C_XJHj9Zvf_Niur-XVsOirVaKYNZY&_nc_zt=23&_nc_ht=scontent-dfw6-1.xx&_nc_gid=0fvOVqMgiiVPDLvxKGoYTg&oh=00_AftbkdJBXKu5cImTMIdZxmBVm45IiqG9CJwfrrdxvmiG7w&oe=69A65872" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;" alt="The Strand">         <p style="font-size: 14px; line-height: 1.6; color: #333;">Paved sidewalk and one way street along the sand that is well used by crusiers, pedestrians and bike riders alike.</p>     </div>     </div>`)[0];
+                popup_77fd2cf6c079f0006d932cc4ad6a52f7.setContent(html_532a83fba342d9f609d51692ace5a78b);
+            
+        
+
+        marker_ebe14c29cc0c20493965312035b20c2a.bindPopup(popup_77fd2cf6c079f0006d932cc4ad6a52f7)
+        ;
+
+        
+    
+    
+            marker_ebe14c29cc0c20493965312035b20c2a.bindTooltip(
+                `<div>
+                     The Strand
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ebe14c29cc0c20493965312035b20c2a.setIcon(icon_6a1c8c0ef9f5525ef9296e8576986212);
+            
+    
+            var marker_2dc7a4fa431ba8587f68cdbdad2299f2 = L.marker(
+                [33.2098, -117.3872],
+                {
+}
+            ).addTo(map_40fd29de1964b09bd6c6c9a971dee78a);
+        
+    
+            var icon_282769fa9e5d6911494d2d72b2320d1d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightblue",
+  "iconColor": "white",
+  "icon": "water",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cd2da68553baa1cb59d6db95c8026be2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5a7d971dbc286ed72a669a1400eb648a = $(`<div id="html_5a7d971dbc286ed72a669a1400eb648a" style="width: 100.0%; height: 100.0%;">     <div style="width: 300px; font-family: Arial, sans-serif;">         <h3 style="color: #4d1979; margin-bottom: 10px;">Harbor Beach</h3>         <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/72/98/74/photo0jpg.jpg?w=1400&h=800&s=1" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;" alt="Harbor Beach">         <p style="font-size: 14px; line-height: 1.6; color: #333;">This beach is a long strip of sand that encloses the harbor and has amazing waves.</p>     </div>     </div>`)[0];
+                popup_cd2da68553baa1cb59d6db95c8026be2.setContent(html_5a7d971dbc286ed72a669a1400eb648a);
+            
+        
+
+        marker_2dc7a4fa431ba8587f68cdbdad2299f2.bindPopup(popup_cd2da68553baa1cb59d6db95c8026be2)
+        ;
+
+        
+    
+    
+            marker_2dc7a4fa431ba8587f68cdbdad2299f2.bindTooltip(
+                `<div>
+                     Harbor Beach
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2dc7a4fa431ba8587f68cdbdad2299f2.setIcon(icon_282769fa9e5d6911494d2d72b2320d1d);
+            
+    
+            var marker_3bd7dd6e9dfe62c0e897fe7c463b885d = L.marker(
+                [33.2103, -117.3946],
+                {
+}
+            ).addTo(map_40fd29de1964b09bd6c6c9a971dee78a);
+        
+    
+            var icon_2a93892c5f5ff5bc2583b786649570f1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ae8f3199944f5acc4bcea68defb26757 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3657a8c3abddc563d75111cab95948a6 = $(`<div id="html_3657a8c3abddc563d75111cab95948a6" style="width: 100.0%; height: 100.0%;">     <div style="width: 300px; font-family: Arial, sans-serif;">         <h3 style="color: #4d1979; margin-bottom: 10px;">Oceanside Harbor</h3>         <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/91/c5/7f/fb-img-1523029615567.jpg?w=1200&h=-1&s=1" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;" alt="Oceanside Harbor">         <p style="font-size: 14px; line-height: 1.6; color: #333;">The harbor has lots of resturnats, activity rentals and boat slips.</p>     </div>     </div>`)[0];
+                popup_ae8f3199944f5acc4bcea68defb26757.setContent(html_3657a8c3abddc563d75111cab95948a6);
+            
+        
+
+        marker_3bd7dd6e9dfe62c0e897fe7c463b885d.bindPopup(popup_ae8f3199944f5acc4bcea68defb26757)
+        ;
+
+        
+    
+    
+            marker_3bd7dd6e9dfe62c0e897fe7c463b885d.bindTooltip(
+                `<div>
+                     Oceanside Harbor
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3bd7dd6e9dfe62c0e897fe7c463b885d.setIcon(icon_2a93892c5f5ff5bc2583b786649570f1);
+            
+    
+            var marker_71f622c088b5d212b65f7f8b74fcd733 = L.marker(
+                [33.1955, -117.3823],
+                {
+}
+            ).addTo(map_40fd29de1964b09bd6c6c9a971dee78a);
+        
+    
+            var icon_156c5b267808bd62bf3f913149b6f628 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_baeab2b957c2ea1e48a5e4ff157beef3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d4eba135b93c2cfaf74c98f078f7154a = $(`<div id="html_d4eba135b93c2cfaf74c98f078f7154a" style="width: 100.0%; height: 100.0%;">     <div style="width: 300px; font-family: Arial, sans-serif;">         <h3 style="color: #4d1979; margin-bottom: 10px;">Sea Lion Island</h3>         <img src="https://lajollamom.com/wp-content/uploads/w3-webp/uploads/2025/03/oceanside-california-sea-lions.jpg.webp" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;" alt="Sea Lion Island">         <p style="font-size: 14px; line-height: 1.6; color: #333;">Observation deck </p>     </div>     </div>`)[0];
+                popup_baeab2b957c2ea1e48a5e4ff157beef3.setContent(html_d4eba135b93c2cfaf74c98f078f7154a);
+            
+        
+
+        marker_71f622c088b5d212b65f7f8b74fcd733.bindPopup(popup_baeab2b957c2ea1e48a5e4ff157beef3)
+        ;
+
+        
+    
+    
+            marker_71f622c088b5d212b65f7f8b74fcd733.bindTooltip(
+                `<div>
+                     Sea Lion Island
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_71f622c088b5d212b65f7f8b74fcd733.setIcon(icon_156c5b267808bd62bf3f913149b6f628);
+            
+    
+            var marker_39b890fd89305d7bca0da0c5f733d6c0 = L.marker(
+                [33.194403, -117.383191],
+                {
+}
+            ).addTo(map_40fd29de1964b09bd6c6c9a971dee78a);
+        
+    
+            var icon_c0a0a7ee82f7dce226bb869d7cbfd34a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bf041f76cc2e8be8df4a2da673fd1566 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f4594ef5d54e96917698fba6a134489d = $(`<div id="html_f4594ef5d54e96917698fba6a134489d" style="width: 100.0%; height: 100.0%;">     <div style="width: 300px; font-family: Arial, sans-serif;">         <h3 style="color: #4d1979; margin-bottom: 10px;">Oceanside Sign</h3>         <img src="https://www.traveloffpath.com/wp-content/uploads/2026/01/Oceanside-sign-at-marina.jpg" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;" alt="Oceanside Sign">         <p style="font-size: 14px; line-height: 1.6; color: #333;">The Oceanside sign is positioned to welcome incoming boaters to the marina.</p>     </div>     </div>`)[0];
+                popup_bf041f76cc2e8be8df4a2da673fd1566.setContent(html_f4594ef5d54e96917698fba6a134489d);
+            
+        
+
+        marker_39b890fd89305d7bca0da0c5f733d6c0.bindPopup(popup_bf041f76cc2e8be8df4a2da673fd1566)
+        ;
+
+        
+    
+    
+            marker_39b890fd89305d7bca0da0c5f733d6c0.bindTooltip(
+                `<div>
+                     Oceanside Sign
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_39b890fd89305d7bca0da0c5f733d6c0.setIcon(icon_c0a0a7ee82f7dce226bb869d7cbfd34a);
+            
+    
+            var marker_d633db109bca3be22e208cb1ac88c975 = L.marker(
+                [33.203741, -117.383987],
+                {
+}
+            ).addTo(map_40fd29de1964b09bd6c6c9a971dee78a);
+        
+    
+            var icon_dcceaeaca9911419a91385a20a8e1397 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "pink",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_02aa607830343bf62d18acfa23a82ff5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3867a8c9a70d83c1577d5919d0acc78a = $(`<div id="html_3867a8c9a70d83c1577d5919d0acc78a" style="width: 100.0%; height: 100.0%;">     <div style="width: 300px; font-family: Arial, sans-serif;">         <h3 style="color: #4d1979; margin-bottom: 10px;">In-N-Out</h3>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqw53H6CCZbpINfsLfA67UwyZyQbWLdh-AnVcOo1if5uKslx9erlKOjPkmKGd450HxgmqHdA68qtGU_SzPnUF4BtTs_fMtSxBKh0rQG_pgh8I_981yBD3dJzo--_lWGw5-0Y_7_=s1360-w1360-h1020-rw" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;" alt="In-N-Out">         <p style="font-size: 14px; line-height: 1.6; color: #333;">Classic burger chain serving customizable burgers, hand-cut fries & shakes.</p>     </div>     </div>`)[0];
+                popup_02aa607830343bf62d18acfa23a82ff5.setContent(html_3867a8c9a70d83c1577d5919d0acc78a);
+            
+        
+
+        marker_d633db109bca3be22e208cb1ac88c975.bindPopup(popup_02aa607830343bf62d18acfa23a82ff5)
+        ;
+
+        
+    
+    
+            marker_d633db109bca3be22e208cb1ac88c975.bindTooltip(
+                `<div>
+                     In-N-Out
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d633db109bca3be22e208cb1ac88c975.setIcon(icon_dcceaeaca9911419a91385a20a8e1397);
+            
+    
+            var marker_fc86159e9b5206ef9e145474708201ce = L.marker(
+                [33.198035, -117.38097],
+                {
+}
+            ).addTo(map_40fd29de1964b09bd6c6c9a971dee78a);
+        
+    
+            var icon_944b860c8a97f78f4be82a0fc3d93d43 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1cc1a21b4fce0f2873e95af9020d4192 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1c0ebc2f02b8076d9b892bf4ff5b1fc9 = $(`<div id="html_1c0ebc2f02b8076d9b892bf4ff5b1fc9" style="width: 100.0%; height: 100.0%;">     <div style="width: 300px; font-family: Arial, sans-serif;">         <h3 style="color: #4d1979; margin-bottom: 10px;">Star Theatre</h3>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoC8DRYFfhzTnaYMqDm8I4erXMppSe0LIK3XmN0hb-MvsId4dW2PBgWQbcMaD9BebW7oj3P9pMo4gjPeC-I6GVjmYq-AEXR38c6BhoxlvASZP-fsaVQbZAGR0ZR5EwGnK_F4LqNvr5Ajp1x=s1360-w1360-h1020-rw" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;" alt="Star Theatre">         <p style="font-size: 14px; line-height: 1.6; color: #333;">Venerable 1950s-era theater showcasing classic musicals & plays in a nostalgic atmosphere.</p>     </div>     </div>`)[0];
+                popup_1cc1a21b4fce0f2873e95af9020d4192.setContent(html_1c0ebc2f02b8076d9b892bf4ff5b1fc9);
+            
+        
+
+        marker_fc86159e9b5206ef9e145474708201ce.bindPopup(popup_1cc1a21b4fce0f2873e95af9020d4192)
+        ;
+
+        
+    
+    
+            marker_fc86159e9b5206ef9e145474708201ce.bindTooltip(
+                `<div>
+                     Star Theatre
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fc86159e9b5206ef9e145474708201ce.setIcon(icon_944b860c8a97f78f4be82a0fc3d93d43);
+            
+    
+            var marker_64cb1cd65867f5e367e0055a965dcfea = L.marker(
+                [33.196645, -117.382292],
+                {
+}
+            ).addTo(map_40fd29de1964b09bd6c6c9a971dee78a);
+        
+    
+            var icon_4427690740cecc159ad99abb4c6afd1d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "pink",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_998375b27aaf24714ee9e5b36b9e7950 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_17d21b4da0b6873bbcf6f04dde4b9dea = $(`<div id="html_17d21b4da0b6873bbcf6f04dde4b9dea" style="width: 100.0%; height: 100.0%;">     <div style="width: 300px; font-family: Arial, sans-serif;">         <h3 style="color: #4d1979; margin-bottom: 10px;">Pannikin Coffee &Tea</h3>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepImo0kFP1e2JuWR4afHEWkitAGfBFkTKAIqzU_3PWU10a0CINHQhaIc3jHo6uycv_YOum973KTfJ-rIizF83WTmx1rGXIDWyzfGeyQte2uZOySblhKVvrxbpkiyMMkh5PjW96b=s1360-w1360-h1020-rw" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;" alt="Pannikin Coffee &Tea">         <p style="font-size: 14px; line-height: 1.6; color: #333;">Mellow cafe in an 1886 building offering coffee, wine, craft beer & live music in a spacious patio.</p>     </div>     </div>`)[0];
+                popup_998375b27aaf24714ee9e5b36b9e7950.setContent(html_17d21b4da0b6873bbcf6f04dde4b9dea);
+            
+        
+
+        marker_64cb1cd65867f5e367e0055a965dcfea.bindPopup(popup_998375b27aaf24714ee9e5b36b9e7950)
+        ;
+
+        
+    
+    
+            marker_64cb1cd65867f5e367e0055a965dcfea.bindTooltip(
+                `<div>
+                     Pannikin Coffee &Tea
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_64cb1cd65867f5e367e0055a965dcfea.setIcon(icon_4427690740cecc159ad99abb4c6afd1d);
+            
+    
+            var marker_e140629b4a5d27ab8dc09f0f6665312d = L.marker(
+                [33.1941, -117.3798],
+                {
+}
+            ).addTo(map_40fd29de1964b09bd6c6c9a971dee78a);
+        
+    
+            var icon_5dcee006261e8440505f0831e608f942 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ba3e14942d0a5836b0ac8408bc8984d2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_188dd320a95faea6c091d00c10df0b74 = $(`<div id="html_188dd320a95faea6c091d00c10df0b74" style="width: 100.0%; height: 100.0%;">     <div style="width: 300px; font-family: Arial, sans-serif;">         <h3 style="color: #4d1979; margin-bottom: 10px;">Oceanside Pier</h3>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerwE7eNEB-GJXL-zvR8kcnTquqqwtBMFNInAZQdwdZSr6kBDWuaqpIY-LSzJcB2Xz7Qo0QaISTxW7P3m44ucpYk6yf3DIEJU11lJxLMsfs316IvsKhUX6Yw_4dWGX7HjhpPUKkBMw=s1360-w1360-h1020-rw" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;" alt="Oceanside Pier">         <p style="font-size: 14px; line-height: 1.6; color: #333;">The pier is the most important landmark in Oceanside and is the center for many activites including fishing and surf competitions.</p>     </div>     </div>`)[0];
+                popup_ba3e14942d0a5836b0ac8408bc8984d2.setContent(html_188dd320a95faea6c091d00c10df0b74);
+            
+        
+
+        marker_e140629b4a5d27ab8dc09f0f6665312d.bindPopup(popup_ba3e14942d0a5836b0ac8408bc8984d2)
+        ;
+
+        
+    
+    
+            marker_e140629b4a5d27ab8dc09f0f6665312d.bindTooltip(
+                `<div>
+                     Oceanside Pier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e140629b4a5d27ab8dc09f0f6665312d.setIcon(icon_5dcee006261e8440505f0831e608f942);
+            
+    
+            var marker_4a72730dc0a795f5ad8b715f96e77100 = L.marker(
+                [33.186172, -117.377317],
+                {
+}
+            ).addTo(map_40fd29de1964b09bd6c6c9a971dee78a);
+        
+    
+            var icon_463a6a5a5486b4471bceb61c3ff64234 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightblue",
+  "iconColor": "white",
+  "icon": "water",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_45c04a744378ac101a6fe405fa9148d1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0c256015b890353dc71bda460d4045c0 = $(`<div id="html_0c256015b890353dc71bda460d4045c0" style="width: 100.0%; height: 100.0%;">     <div style="width: 300px; font-family: Arial, sans-serif;">         <h3 style="color: #4d1979; margin-bottom: 10px;">Lifegaurd Tower 7</h3>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepNuSnN7vtkTEbFLLRiGaJhltXHVgGqrU_nI_JXxd1IdXXukSDd0HNsKB1ssetJpU9b71adaO1sAtZLu30_ye-ZA2M3iPCRWS1qkY4PtC-tUZHMdY8LJ5BLorOaO_8ElPGs0FJA=s1360-w1360-h1020-rw" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;" alt="Lifegaurd Tower 7">         <p style="font-size: 14px; line-height: 1.6; color: #333;">Marks the end of the strand and serves as the perfect spot to enjoy a snack or watch the sunset.</p>     </div>     </div>`)[0];
+                popup_45c04a744378ac101a6fe405fa9148d1.setContent(html_0c256015b890353dc71bda460d4045c0);
+            
+        
+
+        marker_4a72730dc0a795f5ad8b715f96e77100.bindPopup(popup_45c04a744378ac101a6fe405fa9148d1)
+        ;
+
+        
+    
+    
+            marker_4a72730dc0a795f5ad8b715f96e77100.bindTooltip(
+                `<div>
+                     Lifegaurd Tower 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4a72730dc0a795f5ad8b715f96e77100.setIcon(icon_463a6a5a5486b4471bceb61c3ff64234);
+            
+    
+            var marker_8feec1df5483ebf477391c80e0952cd6 = L.marker(
+                [33.194403, -117.383191],
+                {
+}
+            ).addTo(map_40fd29de1964b09bd6c6c9a971dee78a);
+        
+    
+            var icon_67d0f1c7f78d4c4ce1c7fb86d8184588 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5fb876f523e3c910171ed18ceb55b769 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ac06f353b04228cf2a27166f1537a2e3 = $(`<div id="html_ac06f353b04228cf2a27166f1537a2e3" style="width: 100.0%; height: 100.0%;">     <div style="width: 300px; font-family: Arial, sans-serif;">         <h3 style="color: #4d1979; margin-bottom: 10px;">Top Gun House</h3>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweomLz2lqfGyqaB4wUjX6IdifisxpvigonTvcSmfBetycnsp8mlSrPObD8CMQxnZZG5VC6OMWAQGOmv5LuUc06xMGC4wEk9yob5TifZuV_tAN578PYvRtUTNHQ3Oet5GukNCW4Ci=s1360-w1360-h1020-rw" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;" alt="Top Gun House">         <p style="font-size: 14px; line-height: 1.6; color: #333;">The house from Top Gun was moved to the Mission pacific hotel.</p>     </div>     </div>`)[0];
+                popup_5fb876f523e3c910171ed18ceb55b769.setContent(html_ac06f353b04228cf2a27166f1537a2e3);
+            
+        
+
+        marker_8feec1df5483ebf477391c80e0952cd6.bindPopup(popup_5fb876f523e3c910171ed18ceb55b769)
+        ;
+
+        
+    
+    
+            marker_8feec1df5483ebf477391c80e0952cd6.bindTooltip(
+                `<div>
+                     Top Gun House
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8feec1df5483ebf477391c80e0952cd6.setIcon(icon_67d0f1c7f78d4c4ce1c7fb86d8184588);
+            
+    
+            var marker_3d4df1a068edf11ac53ff75dd59ed0ee = L.marker(
+                [33.198409, -117.387261],
+                {
+}
+            ).addTo(map_40fd29de1964b09bd6c6c9a971dee78a);
+        
+    
+            var icon_e265f168ed34f77eb0cc347463812912 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_80be916b1053e13de4a890a5347855a2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4dab51d108f9e566fa9d86ffdb59620c = $(`<div id="html_4dab51d108f9e566fa9d86ffdb59620c" style="width: 100.0%; height: 100.0%;">     <div style="width: 300px; font-family: Arial, sans-serif;">         <h3 style="color: #4d1979; margin-bottom: 10px;">Roberts Cottages</h3>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepNXr_24_gITfEeYNdXkv077DQhs9tksdQJcUYpXlGcFKI9OQ5y6CD1so6nVv47rbihPZv6_JtP_OKeK-Rh_BG2nCgbksLRjHpbLSADiNApcTTsM0_a_UDG-Re6VqvSoi4Mt_uT=s1360-w1360-h1020-rw" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;" alt="Roberts Cottages">         <p style="font-size: 14px; line-height: 1.6; color: #333;">Small beach cottages for rent that have become a landmark in Oceanside.</p>     </div>     </div>`)[0];
+                popup_80be916b1053e13de4a890a5347855a2.setContent(html_4dab51d108f9e566fa9d86ffdb59620c);
+            
+        
+
+        marker_3d4df1a068edf11ac53ff75dd59ed0ee.bindPopup(popup_80be916b1053e13de4a890a5347855a2)
+        ;
+
+        
+    
+    
+            marker_3d4df1a068edf11ac53ff75dd59ed0ee.bindTooltip(
+                `<div>
+                     Roberts Cottages
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3d4df1a068edf11ac53ff75dd59ed0ee.setIcon(icon_e265f168ed34f77eb0cc347463812912);
+            
+    
+            var marker_1afea8a29d96624cab90aeeae762c879 = L.marker(
+                [33.195253, -117.380863],
+                {
+}
+            ).addTo(map_40fd29de1964b09bd6c6c9a971dee78a);
+        
+    
+            var icon_b2d10d3e8b84eee9a308c19031de75b5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "pink",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_430d4f9fa878e8e3645846118fda4bce = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f54f8e085415557eaf2631be74068f89 = $(`<div id="html_f54f8e085415557eaf2631be74068f89" style="width: 100.0%; height: 100.0%;">     <div style="width: 300px; font-family: Arial, sans-serif;">         <h3 style="color: #4d1979; margin-bottom: 10px;">Johnny Mañana's</h3>         <img src="https://lh3.googleusercontent.com/p/AF1QipPgOKgUzhvUvmkQ69kDB_rcZJUDyJP1J0_C4zGu=s1360-w1360-h1020-rw" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;" alt="Johnny Mañana's">         <p style="font-size: 14px; line-height: 1.6; color: #333;">Authentic mexican food and tacos with an expansive back patio.</p>     </div>     </div>`)[0];
+                popup_430d4f9fa878e8e3645846118fda4bce.setContent(html_f54f8e085415557eaf2631be74068f89);
+            
+        
+
+        marker_1afea8a29d96624cab90aeeae762c879.bindPopup(popup_430d4f9fa878e8e3645846118fda4bce)
+        ;
+
+        
+    
+    
+            marker_1afea8a29d96624cab90aeeae762c879.bindTooltip(
+                `<div>
+                     Johnny Mañana's
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1afea8a29d96624cab90aeeae762c879.setIcon(icon_b2d10d3e8b84eee9a308c19031de75b5);
+            
+</script>
+</html>
