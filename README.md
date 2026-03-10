@@ -305,7 +305,7 @@ Your portfolio is evidence of your learning — make it something you're proud t
 - [ ] Proofread all text (spelling, grammar)
 - [ ] Professional appearance suitable for portfolio
 
----
+---2
 
 ## Troubleshooting
 
